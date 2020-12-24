@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テレワーク時代のマネジメント診断ページ</title>
+    <link rel="stylesheet" href="2020final.css"/>
+</head>
+ <body class="body">
+    <h1>テレワーク時代の新マネジメント診断</h1>
+    <h3>
+        「テレワーク時のマネジメントどうしたらいいの？」という方のための簡易診断です。<br>
+        診断結果を見て、より詳しく知りたい方は、書籍『組織力を高める　テレワーク時代の新マネジメント』（日経BP）
+        を読んでみましょう！<br>
+        <a href="https://www.amazon.co.jp/dp/B08J2ZH3XV/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1" target="_blank" rel="noopener noreferrer">購入サイトへ</a>
+    </h3>
+
+            <p><img
+                src="cover+obi.jpg"
+                alt="アイコン" width="200" height="280" class="box" /></p>
+                <p class="box">
+                <h4>【著者プロフィール】<br>
+                成瀬 岳人<br>
+                </p>
+                <p class="box">
+                <h5>
+                パーソルプロセス＆テクノロジー株式会社　ワークスイッチ事業部　事業開発統括部　部長<br>
+                （事業構想士／総務省テレワークマネージャー）<br>
+                </h5>
+                <p class="box">
+                <h5>
+                2012年より業務コンサルタントとして多数の企業の業務改善、新規プロジェクト立ち上げに従事。<br>
+                2015年より、公共事業や複数企業の働き方改革企プロジェクトの企画・プロジェクトマネジメントを担当。<br>
+                </h5></p>
+                <p class="box">
+                <h5>
+                2020年4月より現職。副業で総務省テレワークマネージャーとして全国のテレワーク導入課題を持つ企業の支援を行う。<br>
+                </h5>
+                </p><br>
+            </p>
+
+  
+ <div style="clear:both;"></div>
+
+ <fieldset>
+    <legend>マネジメント診断</legend>
+    <form method="post" action="example.cgi">
+        <script>
+            window.addEventListener('DOMContentLoaded', function(e){
+            document.querySelector('#btn').addEventListener('click',function(e){
+            var l=document.querySelectorAll('.c:checked').length;
+            var msgs=[
+            "テレワーク時のマネジメントに課題が多いです…。本を読んでみましょう！",
+            "支援型マネジメントまであと一歩！本を読んであと一歩を埋めましょう！",
+            "支援型マネジメントが実践できています！是非、本を読んで理解を深めてください！",
+            ];
+            var num=0;
+            if(l>3) num++;
+            if(l>6) num++;
+            if(l>9) num++;
+            document.querySelector('#view').textContent=msgs[num];//おきかえる
+            alert(msgs[num]);//ダイアログ
+            });
+            });
+            </script>
+            
+            <label><input type="checkbox" class="c"> Q１.会社としてのビジョンや目標を、自身の言葉でチームメンバーに伝えている</label><br>
+            <label><input type="checkbox" class="c"> Q２.チームの目標や現在の進捗状況を、月に１回以上チーム全体に伝えている</label><br>
+            <label><input type="checkbox" class="c"> Q３.メンバーに自分自身のキャリアのことを話している</label><br>
+            <label><input type="checkbox" class="c"> Q４.各メンバーの強みと弱みは把握できている</label><br>
+            <label><input type="checkbox" class="c"> Q５.メンバーとは、1週間に1回はコミュニケーションをとっている</label><br>
+            <label><input type="checkbox" class="c"> Q６.管掌するチームの会議では、およそ8割以上メンバーが発言している</label><br>
+            <label><input type="checkbox" class="c"> Q７.指示した仕事が進んでいるかは、可視化されているので常に把握できる</label><br>
+            <label><input type="checkbox" class="c"> Q８.結果さえ出してくれれば、メンバーが今何をしていようが気にならない</label><br>
+            <label><input type="checkbox" class="c"> Q９.確認しなくても、毎日メンバーから進捗連絡や相談が上がってくる</label><br>
+            <label><input type="checkbox" class="c"> Q１０.メンバーからチームや会社をより良くするための提案やアイデアが上がってくる</label><br>
+            <p></p>
+            <input type="button" value="診断ボタン" id="btn">
+            <input type="reset" name="bt01" value="リセットボタン" autofocus>
+        </form>
+</fieldset>
+    <p> <h3>診断結果はコチラ！</h3><div id="view"></div></p>
+    <p>
+        <a href="https://www.amazon.co.jp/dp/B08J2ZH3XV/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1" target="_blank" rel="noopener noreferrer">本の購入はコチラ</a>
+    </p>
+    </div>
+ </body>
+</html>
